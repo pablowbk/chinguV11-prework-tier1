@@ -5,12 +5,13 @@ const services = document.querySelector('.services');
 const contact = document.querySelector('.contact');
 
 // Nav Btns
-
 const navHome = document.getElementById('navHome');
 const navAbout = document.getElementById('navAbout');
 const navServices = document.getElementById('navServices');
 const navContact = document.getElementById('navContact');
 
+// Btns
+const submitBtn = document.getElementById('submit');
 
 var yOffset; // pageYOffset value
 
@@ -41,5 +42,7 @@ function setActiveLink() {
 
 window.addEventListener('scroll', setActiveLink);
 
-
-// Nav Btns click actions
+// Btns click actions
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+})

@@ -44,6 +44,7 @@ button {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 99;
 }
 
 .nav ul {
@@ -422,6 +423,7 @@ button {
 }
 
 .contact form {
+  font-size: 18px;
   max-width: 800px;
   display: grid;
   grid-gap: 20px;
@@ -472,6 +474,8 @@ form label {
 }
 
 form textarea {
+  font-size: 18px;
+  color: #333;
   justify-self: stretch;
   grid-area: textarea;
   border-radius: 5px;
@@ -494,6 +498,12 @@ form #submit {
 form #submit:hover, form #submit:focus {
   cursor: pointer;
   background: var(--grey);
+}
+
+form input::placeholder, form textarea::placeholder {
+  font-size: 18px;
+  color: #333;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 /* === Contact section END === */

@@ -16,26 +16,26 @@
   <!-- Navigation -->
   <nav class="nav">
     <ul>
-      <li><a href="#">Homepage</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">External</a></li>
+      <li><a href="#home" id="navHome">Homepage</a></li>
+      <li><a href="#about" id="navAbout">About Us</a></li>
+      <li><a href="#services" id="navServices">Services</a></li>
+      <li><a href="#contact" id="navContact">Contact</a></li>
+      <li><a href="https://chingu.io/" id="navExt">External</a></li>
     </ul>
   </nav>
 
   <!-- Intro -->
   <section class="hero" id="home">
     <header>
-      <h1>Conquer</h1>
-      <p>Simple Bootstrap Template</p>
+      <h1>Clonequer</h1>
+      <p>A non-Bootstrap Template</p>
     </header>
   </section>
 
   <!-- Main Content -->
     <!-- About start -->
       <!-- Cards start -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__cards">
       <div class="card green">
         <img src="/img/1-1.jpg" alt="">
@@ -89,61 +89,84 @@
   </section>
     <!-- About End -->
 
-  <section class="services">
+    <!-- Services Start -->
+  <section class="services" id="services">
     <header>
       <h2>Our Services</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nemo voluptatum odit deserunt odio voluptates sapiente expedita ut cum, sit hic nobis praesentium? Necessitatibus eveniet, accusamus explicabo consequatur modi similique!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nemo voluptatum odit deserunt odio voluptates sapiente expedita ut cum, sit hic nobis praesentium?</p>
     </header>
     <div class="services__cols">
       <div class="col col-sm">
         <img src="/img/4-1.jpg" alt="">
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate beatae, ad consectetur, sapiente id nemo eius ab fuga ipsam aliquam! Aliquam quo suscipit laudantium, eius, perspiciatis veritatis non in! Totam!</p>
-        <button>More</button>
+        <div class="col_content">
+          <h3>Title One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate beatae, ad consectetur, sapiente id nemo eius ab fuga ipsam aliquam!</p>
+          <!-- <button>More</button> -->
+        </div>
       </div>
       <div class="col col-sm">
         <img src="/img/4-2.jpg" alt="">
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloribus earum necessitatibus possimus veniam temporibus assumenda, illum, magni velit veritatis voluptatem nostrum amet pariatur dicta, ad cum. Quibusdam, vero, ratione.</p>
-        <button>More</button>
+        <div class="col_content">
+          <h3>Title Two</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloribus earum necessitatibus possimus veniam temporibus assumenda.</p>
+          <button>Read it</button>
+        </div>
       </div>
       <div class="col col-sm">
         <img src="/img/4-3.jpg" alt="">
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sapiente tempora perferendis quo sit, soluta officiis, ratione minus ullam, consequatur totam. Reiciendis non, numquam tenetur odit aut suscipit. Placeat, voluptates.</p>
-        <button>More</button>
+        <div class="col_content">
+          <h3>Title Three</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sapiente tempora perferendis quo sit, soluta officiis, ratione minus ullam, consequatur totam.</p>
+          <!-- <button>More</button> -->
+        </div>
       </div>
       <div class="col col-sm">
         <img src="/img/4-4.jpg" alt="">
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis perspiciatis esse quas delectus culpa laboriosam. Nemo laborum voluptas ab ipsam sequi quae quasi exercitationem, nisi ad optio blanditiis cupiditate?</p>
-        <button>More</button>
+        <div class="col_content">
+          <h3>Title Four</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis perspiciatis esse quas delectus culpa laboriosam.</p>
+          <button>Details</button>
+        </div>
       </div>
       <div class="col col-big">
         <img src="/img/4-5.jpg" alt="">
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit voluptate doloremque rerum sit commodi totam accusamus quam facere explicabo vitae rem, non iure, facilis delectus nulla ipsa enim! Suscipit, aliquam.</p>
-        <button>More</button>
+        <div class="col-big_content">
+          <h3>Big Box Title</h3>
+          <div class="text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sapiente quas hic officiis corporis, deserunt, recusandae autem! Eaque amet ipsa sapiente in quam, placeat. Veniam enim corporis quis, minima ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto ex, aliquid provident modi, nobis aperiam officiis. Vitae nostrum voluptatem dolorum? Sapiente autem, ipsa laudantium id distinctio rerum consequatur quis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor delectus cupiditate aliquam deserunt ad cumque, corrupti at itaque nisi odio enim maxime ipsa nulla unde, ipsum quo tempore eveniet deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo inventore doloremque, illum voluptate dolor nobis ex, provident asperiores? Enim eius dolore mollitia, doloribus quia suscipit illo. Ipsum, illo neque eveniet.</p>
+          </div>
+          <button>Read more</button>
+        </div>
       </div>
     </div>
   </section>
+  <!-- Services End -->
 
-  <section class="contact">
-    <h2>Contact Form</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti pariatur mollitia, magni hic, nihil enim totam nisi ad, optio, magnam vero consequatur iure quo est. Numquam dolorem, ipsam voluptatem accusantium!</p>
+  <section class="contact" id="contact">
+    <header>
+      <h2>Contact Form</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti pariatur mollitia, magni hic, nihil enim totam nisi ad, optio, magnam vero consequatur iure quo est. Numquam dolorem, ipsam voluptatem accusantium!</p>
+    </header>
     <form action="">
-      <input type="text" id="name">
-      <label for="name">Name</label>
+      <fieldset class="form_name">
+        <input type="text" id="name">
+        <label for="name">Name</label>
+      </fieldset>
 
-      <input type="email" id="email">
-      <label for="email">Email</label>
+      <fieldset class="form_email">
+        <input type="email" id="email">
+        <label for="email">Email</label>
+      </fieldset>
 
-      <input type="text" id="subject">
-      <label for="subject">Subject</label>
+      <fieldset class="form_subject">
+        <input type="text" id="subject">
+        <label for="subject">Subject</label>
+      </fieldset>
 
       <textarea name="meesage" maxlength="280" placeholder="Your message here..."></textarea>
 
-      <input type="submit" name"submit" value="Send">
+      <input id="submit" type="submit" name"submit" value="Send">
     </form>
   </section>
 
@@ -151,16 +174,15 @@
   <!-- Page footer -->
   <footer class="footer">
 
-Use it free!
+    Use it free!
 
-“Conquer is free Bootstrap template from templatemo website.
-No backlink is required to use this layout.”
+    <blockquote>
+      “Conquer is free Bootstrap template from templatemo website.
+      No backlink is required to use this layout.”
+    </blockquote>
 
-<hr>
-
-
-
-Copyright © 2084 Your Company Name | Design: templatemo
+    <hr>
+    Copyright © 2084 Your Company Name | Design: templatemo
 
   </footer>
 

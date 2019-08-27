@@ -35,11 +35,12 @@ p {
 
 button {
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 /* === Navigation === */
 .nav {
-  background: rgb(56, 62, 76);
   position: fixed;
   top: 0;
   right: 0;
@@ -48,6 +49,7 @@ button {
 }
 
 .nav ul {
+  background: rgb(56, 62, 76);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -58,7 +60,7 @@ button {
 }
 
 .nav li {
-  margin: .2em 0;
+  margin: 5px 0;
   /* padding: 1em .5em; */
   padding: 10px;
 }
@@ -81,7 +83,96 @@ button {
   background: rgb(73, 80, 95);
 }
 
+/* === Hamburguer Btn */
+.navToggle {
+display: none;
+background: #333;
+position: fixed;
+top: 0;
+right: 0;
+border: none;
+margin: 5px 10px;
+padding: 10px;
+}
+
+.line {
+display: block;
+width: 22px;
+height: 2px;
+border-radius: 1px;
+background-color: #fff;
+}
+
+.line+.line {
+margin-top: 4px;
+}
+
+/* Media query for NAV @ 800px */
+@media (max-width: 800px) {
+  .nav {
+    margin: 50px 10px 10px;
+    overflow: hidden;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: -500px;
+    transition: all 300ms ease-out;
+  }
+
+  .nav li {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .nav a {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navToggle {
+    display: block;
+  }
+
+  .showNavUl {
+    margin-top: 0 !important;
+  }
+}
+
 /* === Navigation End === */
+
+
+/* === Scroll To Top btn === */
+.toTopBtn {
+  position: fixed;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: all 500ms ease;
+  display: none;
+}
+
+.toTopBtn img {
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.toTopBtn img:active {
+  transform: scale(.9);
+}
+
+.show {
+  display: flex;
+}
+
 /* === Hero === */
 .hero {
   margin-top: 80px;
@@ -120,7 +211,14 @@ button {
   color: #fff;
 }
 
-/* === Navigation End === */
+@media (max-width: 800px) {
+  .hero {
+    margin-top: 0;
+    height: 100vh;
+  }
+}
+
+/* === Hero end === */
 /* === About Section === */
 .about {
   display: grid;
@@ -276,9 +374,8 @@ button {
 .col_content .btn:hover, .col_content .btn:focus {
   background: #e6e6e6;
 }
+
 /* === About Section END === */
-
-
 /* === Services Section === */
 .services {
   display: grid;
@@ -328,7 +425,6 @@ button {
 
 .services__cols .col_content {
   grid-template-rows: 1fr 3fr 1fr;
-
 }
 
 .services__cols h3 {
@@ -343,7 +439,6 @@ button {
   padding: 10px 20px;
   margin: 0 0 15px;
 } */
-
 .services__cols button {
   justify-self: center;
   align-self: center;
@@ -391,8 +486,8 @@ button {
   margin-top: 15px;
   justify-self: start;
 }
-/* === Services section END === */
 
+/* === Services section END === */
 /* === Contact section === */
 .contact {
   display: grid;
@@ -413,7 +508,7 @@ button {
   align-items: center;
   margin: 100px auto 0;
   max-width: 800px;
-
+  padding: 0 10px;
 }
 
 .contact header h2 {
@@ -428,7 +523,7 @@ button {
   font-size: 18px;
   line-height: 1.6em;
   text-align: center;
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, .4);
   border-radius: 5px;
   padding: 20px;
 }
@@ -436,6 +531,7 @@ button {
 .contact form {
   font-size: 18px;
   max-width: 800px;
+  padding: 0 10px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
@@ -475,7 +571,7 @@ form input {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, .4);
 }
 
 form label {
@@ -491,7 +587,7 @@ form textarea {
   grid-area: textarea;
   border-radius: 5px;
   padding: 10px;
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, .4);
   border: none;
 }
 
@@ -518,23 +614,46 @@ form input::placeholder, form textarea::placeholder {
 }
 
 /* === Contact section END === */
-
-
 .footer {
   margin: 0 auto;
+  margin-top: 100px;
   padding: 10px;
   display: grid;
   justify-items: center;
-  background: rgb(56, 62, 76);
+  background: #fff;
 }
 
 .footer_text p {
   color: #999;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .footer_text a {
   text-decoration: none;
-  color: #fff;
+  color: var(--grey);
   font-weight: 600;
+  position: relative;
+}
+
+.footer_text a::after {
+  content: "";
+  height: 4px;
+  background: var(--grey);
+  position: absolute;
+  width: 0%;
+  bottom: -3px;
+  left: 0;
+  margin-top: 5px;
+  transition: width 200ms ease-in;
+}
+
+.footer_text a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    margin-top: 20px;
+  }
 }

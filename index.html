@@ -15,7 +15,12 @@
 <body>
   <!-- Navigation -->
   <nav class="nav">
-    <ul>
+    <button class="navToggle">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <ul id="navUl">
       <li><a href="#home" id="navHome">Homepage</a></li>
       <li><a href="#about" id="navAbout">About Us</a></li>
       <li><a href="#services" id="navServices">Services</a></li>
@@ -23,6 +28,10 @@
       <li><a href="https://chingu.io/" id="navExt" target="_blank" rel="noreferrer noopener">External</a></li>
     </ul>
   </nav>
+
+  <div class="toTopBtn">
+    <img src="./img/top.png" alt="Back to Top Button" title="Back to Top">
+  </div>
 
   <!-- Intro -->
   <section class="hero" id="home">
@@ -175,8 +184,14 @@
   <footer class="footer">
 
     <div class="footer_text">
-      <p>This is a clone of <a href="#">Conquer Bootstrap Template</a>, built with CSS Grid and Flexbox, by <a href="#">me</a>, as my pre-work assignment for <a href="#">Chingu</a> Voyage 11</p>
-      
+      <p>This is a clone of
+        <a href="https://www.free-css.com/free-css-templates/page196/conquer" id="conquer_link">Conquer Bootstrap Template</a>
+        , built with CSS Grid, Flexbox and Vanilla JS, by
+        <a href="https://github.com/pablowbk" id="wbk">me</a>
+        , as my pre-work assignment for
+        <a href="https://chingu.io" id="chingu_link">Chingu</a>
+         Voyage 11</p>
+
     </div>
 
   </footer>

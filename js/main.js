@@ -3,21 +3,25 @@ const home = document.querySelector('.hero');
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
 const contact = document.querySelector('.contact');
+const navUl = document.getElementById('navUl');
 
 // Nav Btns
 const navHome = document.getElementById('navHome');
 const navAbout = document.getElementById('navAbout');
 const navServices = document.getElementById('navServices');
 const navContact = document.getElementById('navContact');
+const navToggle = document.querySelector('.navToggle');
+const menuLinks = document.querySelectorAll('.nav a')
 
 // Btns
 const submitBtn = document.getElementById('submit');
+const toTopBtn = document.querySelector('.toTopBtn');
 
 var yOffset; // pageYOffset value
 
 function setActiveLink() {
   var yOffset = window.pageYOffset + 80; // 80px is the fixed navbar height
-  // console.log(window.pageYOffset);
+  console.log(window.pageYOffset);
 
   // Check if Home is visible and add 'active' class to nav btn
   yOffset < about.offsetTop
@@ -38,11 +42,35 @@ function setActiveLink() {
   yOffset >= contact.offsetTop && yOffset < document.querySelector('footer').offsetTop
   ? navContact.classList.add('active')
   : navContact.classList.remove('active')
+
+  // show toTopBtn once scroll past 1000px
+  yOffset >= 700
+  ? toTopBtn.classList.add('show')
+  : toTopBtn.classList.remove('show')
 }
 
 window.addEventListener('scroll', setActiveLink);
 
 // Btns click actions
+// -- Show/hide Menu when Hamb is clicked
+navToggle.addEventListener('click', () => {
+  navUl.classList.toggle('showNavUl');
+});
+
+// -- collapse Menu once link is clicked
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navUl.classList.toggle('showNavUl');
+  });
+});
+
+// -- Back to top btn
+toTopBtn.addEventListener('click', () => {
+  window.scroll(0,0);
+});
+
+
+// -- prevent page from reloading when form is submitted
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-})
+});

@@ -216,20 +216,28 @@ margin-top: 4px;
     margin-top: 0;
     height: 100vh;
   }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero header p {
+    font-size: 1em;
+  }
 }
 
 /* === Hero end === */
 /* === About Section === */
 .about {
-  display: grid;
+  /* display: grid;
   grid-gap: 60px;
-  margin: 0 10%;
+  margin: 0 10%; */
+  margin: 2em;
   padding-top: 100px;
 }
 
 /* === About CARDS=== */
 .about__cards {
-  max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 360px));
   grid-gap: 30px;
@@ -239,8 +247,13 @@ margin-top: 4px;
 
 .card {
   background: #f2f2f2;
+  width: 80%;
   display: flex;
   flex-direction: column;
+}
+
+.card + .card {
+  /* margin-bottom: 30px; */
 }
 
 .card_content {
@@ -319,15 +332,16 @@ margin-top: 4px;
 
 /* === About COLS === */
 .about__cols {
-  max-width: 1440px;
   display: grid;
   grid-template-areas: "col1 col2";
   grid-gap: 30px;
+  margin-top: 30px;
   margin-bottom: 60px;
 }
 
 .col {
   background: #f2f2f2;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -346,6 +360,9 @@ margin-top: 4px;
 
 .col-2 {
   grid-area: col2;
+}
+.col img {
+  max-width: 100%;
 }
 
 .col_content h3 {
@@ -373,6 +390,33 @@ margin-top: 4px;
 
 .col_content .btn:hover, .col_content .btn:focus {
   background: #e6e6e6;
+}
+
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+  }
+
+  .about__cards, .about__cols {
+    grid-template-columns: 1fr;
+    max-width: min-content;
+    margin: 0 auto 30px;
+  }
+
+  .about__cols {
+    grid-template-areas: "col1" "col2";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__cards {
+    max-width: 100%;
+  }
+
+  .card {
+  }
 }
 
 /* === About Section END === */
@@ -465,6 +509,10 @@ margin-top: 4px;
   margin-bottom: 60px;
 }
 
+.col-big img {
+  max-width: 100%;
+}
+
 .col-big h3 {
   margin-top: 20px;
   text-align: left;
@@ -486,6 +534,26 @@ margin-top: 4px;
   margin-top: 15px;
   justify-self: start;
 }
+
+@media (max-width:800px) {
+  .services__cols {
+    grid-template-columns: repeat(2, 260px);
+    padding: 10px;
+    grid-gap: 10px;
+  }
+}
+@media (max-width:600px) {
+  .services__cols {
+    grid-template-columns: minmax(260px, 1fr);
+    justify-items: center;
+  }
+
+  .col-sm {
+    width: 260px;
+  }
+}
+
+
 
 /* === Services section END === */
 /* === Contact section === */
@@ -575,6 +643,7 @@ form input {
 }
 
 form label {
+  visibility: hidden;
   position: absolute;
   top: 10px;
   left: 20px;
@@ -608,10 +677,42 @@ form #submit:hover, form #submit:focus {
 }
 
 form input::placeholder, form textarea::placeholder {
-  font-size: 18px;
+  font-size: 14px;
   color: #333;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+@media (max-width:800px) {
+  .contact header {
+    margin: 80px auto 0;
+  }
+  .contact header h2 {
+    font-size: 1.5em;
+  }
+
+  .contact header p {
+    font-size: 14px;
+  }
+
+  .contact form {
+    font-size: 14px;
+    max-width: none;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "subject"
+      "textarea"
+      "submit"
+    ;
+  }
+
+  form textarea {
+    min-height: 150px;
+  }
+
+}
+
 
 /* === Contact section END === */
 .footer {
@@ -655,5 +756,8 @@ form input::placeholder, form textarea::placeholder {
 @media (max-width: 800px) {
   .footer {
     margin-top: 20px;
+  }
+  .footer_text p {
+    font-size: 12px;
   }
 }

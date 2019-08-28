@@ -86,5 +86,5 @@ submit.addEventListener('click', (e) => {
 // Parallax-O-Matic effects
 window.addEventListener('scroll', () => {
   let yScroll = window.pageYOffset;
-  // heroParallax.style.backgroundPositionY = yScroll * 0.7 + "px";
+  heroParallax.style.backgroundPositionY = yScroll * 0.05 + "px";
 });

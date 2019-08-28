@@ -185,7 +185,7 @@ margin-top: 4px;
   background-image: url("../img/bg-1.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* background-size: auto 100%; */
   background-size: cover;
 }
@@ -439,7 +439,7 @@ margin-top: 4px;
   background-image: url('../img/bg-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center top;
 }
 
@@ -565,7 +565,7 @@ margin-top: 4px;
   background-image: url('../img/bg-3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
 }
 

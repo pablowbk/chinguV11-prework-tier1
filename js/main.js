@@ -84,7 +84,11 @@ submit.addEventListener('click', (e) => {
 
 
 // Parallax-O-Matic effects
-window.addEventListener('scroll', () => {
+function parallaxMagic() {
   let yScroll = window.pageYOffset;
-  heroParallax.style.backgroundPositionY = yScroll * 0.05 + "px";
-});
+  heroParallax.style.backgroundPositionY = yScroll * 0.4 + "px";
+  servicesParallax.style.backgroundPositionY = (yScroll - 2000) * 0.05 + "px";
+  contactParallax.style.backgroundPositionY = (yScroll - 5000) * 0.05 + "px";
+}
+
+window.addEventListener('scroll', parallaxMagic);

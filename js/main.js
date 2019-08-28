@@ -1,11 +1,17 @@
-// Sections
+// DOM Elements declaration
+  // Sections
 const home = document.querySelector('.hero');
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
 const contact = document.querySelector('.contact');
 const navUl = document.getElementById('navUl');
 
-// Nav Btns
+  // Parallax containers
+const heroParallax = document.getElementById('home');
+const servicesParallax = document.querySelector('.services header');
+const contactParallax = document.getElementById('contact');
+
+  // Nav Btns
 const navHome = document.getElementById('navHome');
 const navAbout = document.getElementById('navAbout');
 const navServices = document.getElementById('navServices');
@@ -13,15 +19,16 @@ const navContact = document.getElementById('navContact');
 const navToggle = document.querySelector('.navToggle');
 const menuLinks = document.querySelectorAll('.nav a')
 
-// Btns
+  // Btns
 const submitBtn = document.getElementById('submit');
 const toTopBtn = document.querySelector('.toTopBtn');
 
 var yOffset; // pageYOffset value
 
+// functions
 function setActiveLink() {
   var yOffset = window.pageYOffset + 80; // 80px is the fixed navbar height
-  console.log(window.pageYOffset);
+  // console.log(window.pageYOffset);
 
   // Check if Home is visible and add 'active' class to nav btn
   yOffset < about.offsetTop
@@ -73,4 +80,11 @@ toTopBtn.addEventListener('click', () => {
 // -- prevent page from reloading when form is submitted
 submit.addEventListener('click', (e) => {
   e.preventDefault();
+});
+
+
+// Parallax-O-Matic effects
+window.addEventListener('scroll', () => {
+  let yScroll = window.pageYOffset;
+  // heroParallax.style.backgroundPositionY = yScroll * 0.7 + "px";
 });

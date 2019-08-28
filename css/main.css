@@ -186,8 +186,8 @@ margin-top: 4px;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  /* background-size: 100% 100%; */
-  background-size: cover !important;
+  /* background-size: auto 100%; */
+  background-size: cover;
 }
 
 .hero header {
@@ -438,7 +438,7 @@ margin-top: 4px;
   background: #eee;
   background-image: url('../img/bg-2.jpg');
   background-repeat: no-repeat;
-  background-size: cover !important;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center top;
 }
@@ -564,7 +564,7 @@ margin-top: 4px;
   grid-gap: 20px;
   background-image: url('../img/bg-3.jpg');
   background-repeat: no-repeat;
-  background-size: cover !important;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
